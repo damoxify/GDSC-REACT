@@ -1,11 +1,12 @@
 import './App.css';
-import Header from './components/header';
+import FeedbackItem from './components/FeedbackItem';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="container">
       <Header/>
-
+      <FeedbackItem/>
     </div>
   );
 }
