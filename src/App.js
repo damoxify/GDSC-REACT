@@ -1,14 +1,22 @@
-import './App.css';
-import Header from './components/Header';
-import FeedbackItem from './components/FeedbackItem';
+import React from 'react'
+import Header from './components/Header'
+import FeedbackList from './components/FeedbackList'
+import { useState } from 'react'
+import FeedbackData from './data/FeedbackData'
+import FeedbackForm from './components/FeedbackForm'
 
 function App() {
+const [feedback] = useState(FeedbackData)
   return (
-    <div className="container">
-      <Header/>
-      <FeedbackItem/>
+    <>
+    <Header />
+    <div className='container'>
+        
+        <FeedbackForm/>
+     <FeedbackList feedback= {feedback}/>
     </div>
-  );
+    </>
+  )
 }
 
-export default App;
+export default App
