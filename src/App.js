@@ -5,18 +5,19 @@ import { useState } from 'react'
 import FeedbackData from './data/FeedbackData'
 import FeedbackForm from './components/FeedbackForm'
 
-function App() {
-const [feedback] = useState(FeedbackData)
+
+function App({feedback}) {
+  const[feedback] = useState(FeedbackData)
+  
+
   return (
     <>
-    <Header />
-    <div className='container'>
-        
-        <FeedbackForm/>
-     <FeedbackList feedback= {feedback}/>
+      <Header/>
+      <div className='container'>
+      <FeedbackForm/>
+      <FeedbackList feedback={feedback}/>
     </div>
     </>
   )
 }
-
-export default App
+export default App;
