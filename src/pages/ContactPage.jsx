@@ -8,9 +8,6 @@ import { FaPhone } from "react-icons/fa";
 
 
 
-
-
-
 function ContactPage() {
   return (
     <Card>
